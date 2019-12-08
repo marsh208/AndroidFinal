@@ -8,7 +8,7 @@
 
     <TextView
         android:id="@+id/Team2score"
-        android:layout_width="60dp"
+        android:layout_width="65dp"
         android:layout_height="70dp"
         android:layout_marginStart="20dp"
         android:layout_marginLeft="20dp"
@@ -28,7 +28,7 @@
 
     <TextView
         android:id="@+id/Team1score"
-        android:layout_width="60dp"
+        android:layout_width="65dp"
         android:layout_height="70dp"
         android:fontFamily="monospace"
         android:gravity="center"
@@ -69,12 +69,12 @@
         android:id="@+id/displayTeam"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="112dp"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        android:layout_marginLeft="112dp"
+        android:layout_marginStart="180dp"
+        android:layout_marginLeft="180dp"
         android:layout_marginBottom="36dp"
         android:gravity="center"
         android:text="                     "
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@id/ResultsText"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -161,8 +161,8 @@
         android:id="@+id/Turn"
         android:layout_width="110dp"
         android:layout_height="41dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginLeft="68dp"
         android:fontFamily="monospace"
         android:text="TURN:"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
@@ -171,11 +171,9 @@
         android:textSize="30sp"
         android:textStyle="bold"
 
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.523" />
+        app:layout_constraintBottom_toBottomOf="@+id/displayTeam"
+        app:layout_constraintRight_toLeftOf="@+id/displayTeam"
+
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

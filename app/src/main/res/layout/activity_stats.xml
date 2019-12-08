@@ -1,22 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/backgroundbeer">
+
 
     <TextView
-        android:layout_marginTop="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
         android:text="The winner is..."
-        android:layout_gravity="center" />
+        android:textColor="#000000" />
+
     <TextView
         android:id="@+id/winnerText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="#00FFD800"
+        android:shadowColor="#00FA0C0C"
         android:text="winner"
+        android:textColor="#020202"
         android:textSize="@android:dimen/notification_large_icon_height"
-        android:layout_gravity="center" />
+        android:textStyle="bold" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="SCORE"
+        android:textColor="#0C0C0C"
+        android:textColorHighlight="#00FFFFFF"
+        android:textColorHint="#000000"
+        android:textColorLink="#00000000"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/displayFinalScores"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="0"
+
+        android:textColor="#000000"
+        android:textColorHint="#0045C55A"
+        android:textColorLink="#000000"
+        android:textSize="36sp"
+        android:textStyle="bold" />
 
 
     <TableLayout
@@ -235,6 +267,7 @@
         </TableRow>
     </TableLayout>
 
+
 <com.google.android.gms.ads.AdView
     xmlns:ads="http://schemas.android.com/apk/res-auto"
     android:id="@+id/adView"
@@ -245,6 +278,8 @@
     ads:adSize="BANNER"
     ads:adUnitId="ca-app-pub-3940256099942544/6300978111">
 </com.google.android.gms.ads.AdView>
+
+
 
 </LinearLayout>
 

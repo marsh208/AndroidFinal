@@ -141,7 +141,7 @@ class GameActivity : AppCompatActivity() {
 
     private fun generateStats(winner : String) {
         //score, total tosses, scoring prob = score/totalTosses, missed tossess = totalTosses-catches-points, hit % = catches+points/totalTosses, team1catches = team2tosses-misses-scores/team2tosses
-
+        val finalScores = team1Score.toString() + " : " + team2Score.toString()
         val scoreProb1 = "%.2f".format((team1Score.toDouble()/team1TotalTosses)*100) + "%"
         val scoreProb2 = "%.2f".format((team2Score.toDouble()/team2TotalTosses)*100) + "%"
 
@@ -199,6 +199,10 @@ class GameActivity : AppCompatActivity() {
             putExtra(
                 "catchProb2",
                 catchProb2
+            )
+            putExtra(
+                "finalScores",
+                finalScores
             )
         })
 
