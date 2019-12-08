@@ -16,5 +16,10 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, SelectionActivity::class.java))
         }
 
+        rulesButton.setOnClickListener{
+            startActivity(Intent(this, RulesActivity::class.java))
+        }
+
+
     }
 }

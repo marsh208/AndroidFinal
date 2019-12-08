@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">FinalProject</string>
+
+    <string name="bulleted_list">
+        <li>It is played on a standard sheet of plywood (8 by 4 feet (2.4 by 1.2 m) of at least 1⁄2 inch (13 mm) thickness) placed on banquet tables, saw horses or similar objects between 20 and 30 inches (510 and 760 mm). The game uses a standard solo cup (4.75 inches (121 mm) height, 3.75 inches (95 mm) diameter). The official dice used for play is the standard Bicycle die, measuring 5⁄8 inch (16 mm).</li>\n
+        <li>The game is played 2 vs. 2</li>\n
+        <li>A cup full of water or beer is to be placed 8 inches (200 mm) from the back, 5 inches (130 mm) from the side, for each player (hand from back, fist from side).</li>\n
+        <li>The game is played to 11, win by 2.</li>\n
+        <li>One player from each team will roll the die, the team rolling the highest number will be able to choose either side or first toss.</li>\n
+        <li>Players must tap the die or signal with a phrase like “dye up” before tossing to signal the impending throw.</li>\n
+        <li>The die must be thrown in such a manner that the opposing team does not see the throwers palm upon release of the die.</li>\n
+        <li>The die must travel higher than 8 feet (2.4 m) from the ground. If the opposing team disputes the height, the shot does not count.</li>\n
+        <li>A point is awarded if the die hits the table and bounces off the defensive (4 feet (1.2 m)) edge of the table without being properly caught.</li>\n
+        <li>The defending team may catch the die to nullify potential points scored. The die must be caught with one hand (juggling is permitted) but must not be trapped between any surface or body part or a point is awarded. Once the die comes in contact with the floor or stops moving, the play is dead and a point is awarded. Players may not reach over the table to catch the dice.</li>\n
+        <li>If the die is thrown into the opposing team’s cup, this is a "plunk", "sink" or "sploosh": the throwing team is awarded 3 points.</li>\n
+        <li>The line judge has the final say on all disputes.</li>\n
+    </string>
 </resources>

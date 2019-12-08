@@ -20,6 +20,7 @@
         <activity android:name=".SelectionActivity" />
         <activity android:name=".GameActivity" />
         <activity android:name=".StatsActivity" />
+        <activity android:name=".RulesActivity" />
 
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
