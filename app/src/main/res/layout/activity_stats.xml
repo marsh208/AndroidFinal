@@ -50,7 +50,6 @@
         android:textSize="36sp"
         android:textStyle="bold" />
 
-
     <TableLayout
         android:id="@+id/statsList"
         android:layout_width="match_parent"
