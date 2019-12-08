@@ -12,22 +12,25 @@
         android:id="@+id/welcomeText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Welcome!"
+        android:text="BeerDyeTracker!"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.212"
-        android:textColor="@android:color/black"
-        android:textStyle="bold"
-        />
+        app:layout_constraintVertical_bias="0.242" />
 
     <Button
         android:id="@+id/newGameButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="#00FFFFFF"
         android:text="New Game"
+        android:textColor="#000000"
+        android:textSize="36sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -35,33 +38,12 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.512" />
 
-    <Button
-        android:id="@+id/statsButton"
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Stats"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="Created by: Michael, Mark, Jayson"
+        app:layout_constraintTop_toBottomOf="@id/newGameButton"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.676" />
-
-    <ImageView
-        android:id="@+id/imageView7"
-        android:layout_width="211dp"
-        android:layout_height="133dp"
-        app:srcCompat="@drawable/dices"
-        tools:layout_editor_absoluteX="109dp"
-        tools:layout_editor_absoluteY="221dp"
-        tools:visibility="visible" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/chbeer"
-        tools:layout_editor_absoluteX="83dp"
-        tools:layout_editor_absoluteY="565dp" />
+        app:layout_constraintLeft_toLeftOf="parent"
 
 </androidx.constraintlayout.widget.ConstraintLayout>
