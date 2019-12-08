@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="The winner is..."
+        android:layout_gravity="center" />
+    <TextView
+        android:id="@+id/winnerText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="winner"
+        android:textSize="@android:dimen/notification_large_icon_height"
+        android:layout_gravity="center" />
+
+
+
+    <TableLayout
+        android:id="@+id/statsList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="100dp"
+        android:stretchColumns="*" >
+
+        <TableRow
+            android:id="@+id/topRow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1" >
+
+            <TextView
+                android:id="@+id/statType"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingLeft="8dp"
+                android:text="Stat"
+
+                android:layout_column="0"
+                />
+
+            <TextView
+                android:id="@+id/team1StatColumn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingLeft="8dp"
+                android:text="Team 1"
+
+                android:layout_column="0"
+                />
+
+            <TextView
+                android:id="@+id/team2StatColumn"
+                android:paddingLeft="4dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Team 2"
+                android:layout_column="1"
+                />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/totalTosses"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1"
+            android:paddingTop="10dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingLeft="8dp"
+                android:text="Total Tosses"
+                android:layout_column="0"
+                />
+
+            <TextView
+                android:id="@+id/team1TotalTosses"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingLeft="8dp"
+                android:text="0"
+                android:layout_column="0"
+                />
+
+            <TextView
+                android:id="@+id/team2TotalTosses"
+                android:paddingLeft="4dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:layout_column="1"
+                />
+        </TableRow>
+
+
+        <TableRow
+            android:id="@+id/scoringProb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1"
+            android:paddingTop="10dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingLeft="8dp"
+                android:text="Scoring Probability"
+                android:layout_column="0"
+                />
+
+            <TextView
+                android:id="@+id/team1ScoringProb"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingLeft="8dp"
+                android:text="%"
+                android:layout_column="0"
+                />
+
+            <TextView
+                android:id="@+id/team2ScoringProb"
+                android:paddingLeft="4dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="%"
+                android:layout_column="1"
+                />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/missedTosses"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1"
+            android:paddingTop="10dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingLeft="8dp"
+                android:text="Missed Tosses"
+                android:layout_column="0"
+                />
+
+            <TextView
+                android:id="@+id/team1MissedTosses"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingLeft="8dp"
+                android:text="0"
+                android:layout_column="0"
+                />
+
+            <TextView
+                android:id="@+id/team2MissedTosses"
+                android:paddingLeft="4dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:layout_column="1"
+                />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/hitProbability"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1"
+            android:paddingTop="10dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingLeft="8dp"
+                android:text="Hit Probability"
+                android:layout_column="0"
+                />
+
+            <TextView
+                android:id="@+id/team1HitProb"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingLeft="8dp"
+                android:text="%"
+                android:layout_column="0"
+                />
+
+            <TextView
+                android:id="@+id/team2HitProb"
+                android:paddingLeft="4dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="%"
+                android:layout_column="1"
+                />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/catchProbability"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1"
+            android:paddingTop="10dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingLeft="8dp"
+                android:text="Catch Probability"
+                android:layout_column="0"
+                />
+
+            <TextView
+                android:id="@+id/team1CatchProb"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingLeft="8dp"
+                android:text="%"
+                android:layout_column="0"
+                />
+
+            <TextView
+                android:id="@+id/team2CatchProb"
+                android:paddingLeft="4dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="%"
+                android:layout_column="1"
+                />
+        </TableRow>
+    </TableLayout>
+
+<com.google.android.gms.ads.AdView
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/adView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="200dp"
+    android:layout_centerHorizontal="true"
+    ads:adSize="BANNER"
+    ads:adUnitId="ca-app-pub-3940256099942544/6300978111">
+</com.google.android.gms.ads.AdView>
+
+</LinearLayout>
+
