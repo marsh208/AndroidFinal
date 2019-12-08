@@ -55,6 +55,11 @@ class StatsActivity : AppCompatActivity() {
         team1CatchProb.text = intent.extras?.get("catchProb1").toString()
         team2CatchProb.text = intent.extras?.get("catchProb2").toString()
 
+        sinks1.text = intent.extras?.get("sinks1").toString()
+        sinks2.text = intent.extras?.get("sinks2").toString()
+
+
+
         displayFinalScores.text = intent.extras?.get("finalScores").toString()
 
 

@@ -16,8 +16,6 @@ class GameActivity : AppCompatActivity() {
     private fun getTeam1Name() = intent.extras?.get("team1Name").toString()
     private fun getTeam2Name() = intent.extras?.get("team2Name").toString()
 
-
-
     var currentIndex : Int = 0
 
     var team1Score : Int = 0
@@ -29,6 +27,8 @@ class GameActivity : AppCompatActivity() {
     var team1TotalTosses : Int = 0
     var team2TotalTosses : Int = 0
 
+    var team1NumSinks : Int = 0
+    var team2NumSinks : Int = 0
 
 
 
@@ -60,6 +60,53 @@ class GameActivity : AppCompatActivity() {
             {
                 team2TotalTosses++
                 team2Score++
+
+                Team2score.text = team2Score.toString()
+
+                if(team2Score >= 11)
+                {
+                    generateStats(getTeam2Name())
+                }
+            }
+
+
+            if (currentIndex == 3)
+            {
+                currentIndex = 0
+            }
+            else
+            {
+                currentIndex++
+            }
+
+            if(team1Score < 11 && team2Score < 11)
+            {
+                displayTeam.text = playerArray[currentIndex]
+            }
+
+
+        }
+
+        sinkButton.setOnClickListener{
+            if(currentIndex == 0 || currentIndex == 1)
+            {
+                team1TotalTosses++
+                team1Score = team1Score + 3
+                team1NumSinks++
+
+                Team1score.text = team1Score.toString()
+
+                if(team1Score >= 11)
+                {
+                    generateStats(getTeam1Name())
+                }
+            }
+            else
+            {
+                team2TotalTosses++
+                team2Score = team2Score + 3
+                team2NumSinks++
+
 
                 Team2score.text = team2Score.toString()
 
@@ -142,18 +189,20 @@ class GameActivity : AppCompatActivity() {
     private fun generateStats(winner : String) {
         //score, total tosses, scoring prob = score/totalTosses, missed tossess = totalTosses-catches-points, hit % = catches+points/totalTosses, team1catches = team2tosses-misses-scores/team2tosses
         val finalScores = team1Score.toString() + " : " + team2Score.toString()
-        val scoreProb1 = "%.2f".format((team1Score.toDouble()/team1TotalTosses)*100) + "%"
-        val scoreProb2 = "%.2f".format((team2Score.toDouble()/team2TotalTosses)*100) + "%"
+        val scoreProb1 = "%.2f".format(((team1Score.toDouble() - team1NumSinks*2)/team1TotalTosses)*100) + "%"
+        val scoreProb2 = "%.2f".format(((team2Score.toDouble() - team2NumSinks*2)/team2TotalTosses)*100) + "%"
 
-        val missedTosses1 = (team1TotalTosses - team2Catches - team1Score)
-        val missedTosses2 = (team2TotalTosses - team1Catches - team2Score)
+        val missedTosses1 = (team1TotalTosses - team2Catches - (team1Score-team1NumSinks*2))
+        val missedTosses2 = (team2TotalTosses - team1Catches - (team2Score-team2NumSinks*2))
 
-        val hitProb1 = "%.2f".format(((team2Catches.toDouble() + team1Score)/team1TotalTosses)*100) + "%"
-        val hitProb2 = "%.2f".format(((team1Catches.toDouble() + team2Score)/team2TotalTosses)*100) + "%"
+        val hitProb1 = "%.2f".format(((team2Catches.toDouble() + team1Score-team1NumSinks*2)/team1TotalTosses)*100) + "%"
+        val hitProb2 = "%.2f".format(((team1Catches.toDouble() + team2Score-team2NumSinks*2)/team2TotalTosses)*100) + "%"
 
-        val catchProb1 = "%.2f".format((team1Catches.toDouble()/(team2TotalTosses - missedTosses2)*100)) + "%"
-        val catchProb2 = "%.2f".format((team2Catches.toDouble()/(team1TotalTosses- missedTosses1)*100)) + "%"
+        val catchProb1 = "%.2f".format((team1Catches.toDouble()/(team2TotalTosses - missedTosses2- team2NumSinks)*100)) + "%"
+        val catchProb2 = "%.2f".format((team2Catches.toDouble()/(team1TotalTosses- missedTosses1-team1NumSinks)*100)) + "%"
 
+        val sinks1 = team1NumSinks
+        val sinks2= team2NumSinks
 
         startActivity(Intent(this, StatsActivity::class.java).apply {
             putExtra(
@@ -203,6 +252,14 @@ class GameActivity : AppCompatActivity() {
             putExtra(
                 "finalScores",
                 finalScores
+            )
+            putExtra(
+                "sinks1",
+                sinks1
+            )
+            putExtra(
+                "sinks2",
+                sinks2
             )
         })
 
