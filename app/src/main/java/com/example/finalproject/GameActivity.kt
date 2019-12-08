@@ -30,8 +30,6 @@ class GameActivity : AppCompatActivity() {
     var team1NumSinks : Int = 0
     var team2NumSinks : Int = 0
 
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_game)
@@ -181,9 +179,6 @@ class GameActivity : AppCompatActivity() {
             }
             displayTeam.text = playerArray[currentIndex]
         }
-
-
-
     }
 
     private fun generateStats(winner : String) {
@@ -202,7 +197,7 @@ class GameActivity : AppCompatActivity() {
         val catchProb2 = "%.2f".format((team2Catches.toDouble()/(team1TotalTosses- missedTosses1-team1NumSinks)*100)) + "%"
 
         val sinks1 = team1NumSinks
-        val sinks2= team2NumSinks
+        val sinks2 = team2NumSinks
 
         startActivity(Intent(this, StatsActivity::class.java).apply {
             putExtra(
@@ -263,8 +258,6 @@ class GameActivity : AppCompatActivity() {
             )
         })
 
-
     }
-
 
 }

@@ -12,8 +12,6 @@
         android:id="@+id/Team2score"
         android:layout_width="65dp"
         android:layout_height="70dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
         android:fontFamily="monospace"
         android:gravity="center"
         android:text="0"
@@ -22,9 +20,8 @@
         android:textSize="50sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/semicolon"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/semicolon"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.275" />
 
@@ -40,11 +37,8 @@
         android:textSize="50sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/semicolon"
-        app:layout_constraintHorizontal_bias="0.904"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/semicolon"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.275" />
 
@@ -52,8 +46,6 @@
         android:id="@+id/semicolon"
         android:layout_width="18dp"
         android:layout_height="70dp"
-        android:layout_marginStart="196dp"
-        android:layout_marginLeft="196dp"
         android:fontFamily="monospace"
         android:gravity="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
@@ -61,36 +53,33 @@
         android:textColor="@android:color/black"
         android:textSize="50sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/Team1score"
+        app:layout_constraintRight_toLeftOf="@id/Team2score"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.275" />
+        app:layout_constraintVertical_bias="0.275"
+        />
 
     <TextView
         android:id="@+id/displayTeam"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="180dp"
-        android:layout_marginLeft="180dp"
         android:layout_marginBottom="36dp"
         android:gravity="center"
-        android:text="                     "
+        android:text=""
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@id/ResultsText"
+        app:layout_constraintTop_toBottomOf="@id/Turn"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintRight_toRightOf="parent" />
 
     <TextView
         android:id="@+id/ResultsText"
         android:layout_width="137dp"
         android:layout_height="39dp"
-        android:layout_marginStart="144dp"
-        android:layout_marginLeft="144dp"
         android:fontFamily="monospace"
         android:text="RESULT"
+        android:gravity="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:textColor="@android:color/holo_red_dark"
         android:textColorHint="#F8F6F6"
@@ -99,7 +88,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.524" />
 
@@ -172,18 +160,16 @@
         android:id="@+id/Turn"
         android:layout_width="110dp"
         android:layout_height="41dp"
-        android:layout_marginStart="68dp"
-        android:layout_marginLeft="68dp"
         android:fontFamily="monospace"
-        android:text="TURN:"
-        android:layout_gravity="center"
+        android:text="TURN"
+        android:gravity="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:textColor="@android:color/background_dark"
         android:textColorHint="#F8F6F6"
         android:textSize="30sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/displayTeam"
-        app:layout_constraintRight_toLeftOf="@+id/displayTeam"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/semicolon"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
