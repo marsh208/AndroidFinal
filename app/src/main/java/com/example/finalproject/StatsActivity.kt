@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.ArrayAdapter
+import androidx.lifecycle.ViewModelProviders
+import com.bumptech.glide.Glide
 import com.google.android.gms.ads.AdListener
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.AdView
@@ -19,10 +21,17 @@ class StatsActivity : AppCompatActivity() {
 
     lateinit var mAdView : AdView
 
+    private lateinit var gifViewModel: GifViewModel
+
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_stats)
+
+        gifViewModel = ViewModelProviders.of(this).get(GifViewModel::class.java)
+        gifViewModel.getRandomGif("beer").observe(this,
+            androidx.lifecycle.Observer { loadGif(it) })
 
         MobileAds.initialize(this) {}
         mAdView = findViewById(R.id.adView)
@@ -67,5 +76,11 @@ class StatsActivity : AppCompatActivity() {
 
 
 
+    }
+
+    private fun loadGif(gif: Gif){
+        Glide.with(this)
+            .load(gif.url)
+            .into(statsGif)
     }
 }

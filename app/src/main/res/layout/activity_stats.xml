@@ -54,9 +54,9 @@
     <TableLayout
         android:id="@+id/statsList"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="200dp"
         android:layout_centerInParent="true"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="0dp"
         android:stretchColumns="*" >
 
         <TableRow
@@ -303,17 +303,26 @@
         </TableRow>
     </TableLayout>
 
+    <ImageView
+        android:id="@+id/statsGif"
+        android:layout_marginTop="@dimen/browser_actions_context_menu_min_padding"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:visibility="visible"
+        android:layout_gravity="center_horizontal"/>
 
-<com.google.android.gms.ads.AdView
-    xmlns:ads="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/adView"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_marginBottom="200dp"
-    android:layout_centerHorizontal="true"
-    ads:adSize="BANNER"
-    ads:adUnitId="ca-app-pub-3940256099942544/6300978111">
-</com.google.android.gms.ads.AdView>
+
+
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="200dp"
+        android:layout_centerHorizontal="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-3940256099942544/6300978111">
+    </com.google.android.gms.ads.AdView>
 
 
 

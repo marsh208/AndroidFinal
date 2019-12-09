@@ -5,8 +5,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".GameActivity"
-    android:background="@drawable/backgroundbeer"
-    >
+    android:background="@drawable/backgroundbeer">
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="175dp"
+        android:layout_height="175dp"
+        android:visibility="visible"
+        android:src="@mipmap/dice_foreground"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 
     <TextView
         android:id="@+id/Team2score"
@@ -75,10 +85,10 @@
 
     <TextView
         android:id="@+id/ResultsText"
-        android:layout_width="137dp"
-        android:layout_height="39dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:fontFamily="monospace"
-        android:text="RESULT"
+        android:text="TOSS RESULT"
         android:gravity="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:textColor="@android:color/holo_red_dark"

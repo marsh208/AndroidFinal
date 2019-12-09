@@ -9,12 +9,17 @@ import kotlinx.android.synthetic.main.activity_selection.*
 import kotlinx.android.synthetic.main.activity_stats.*
 import java.util.*
 import android.view.animation.AnimationUtils
+import androidx.lifecycle.ViewModelProviders
+import com.bumptech.glide.Glide
 
 
 class GameActivity : AppCompatActivity() {
 
     private fun getTeam1Name() = intent.extras?.get("team1Name").toString()
     private fun getTeam2Name() = intent.extras?.get("team2Name").toString()
+
+
+
 
     var currentIndex : Int = 0
 
@@ -34,13 +39,22 @@ class GameActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_game)
 
+
+
+
         var playerArray : Array<String> = arrayOf(getTeam1Name() + ": Player 1",getTeam1Name() + ": Player 2",getTeam2Name() + ": Player 1",getTeam2Name() + ": Player 2")
 
         displayTeam.text = playerArray[currentIndex]
 
         scoreButton.setOnClickListener{
+
+            image.animate().rotationBy(360f).start()
+
+
+
             var animation1 = AnimationUtils.loadAnimation(this@GameActivity, R.anim.mixed)
             scoreButton.startAnimation(animation1)
+
             if(currentIndex == 0 || currentIndex == 1)
             {
 
@@ -86,6 +100,8 @@ class GameActivity : AppCompatActivity() {
         }
 
         sinkButton.setOnClickListener{
+            image.animate().rotationBy(360f).start()
+
             if(currentIndex == 0 || currentIndex == 1)
             {
                 team1TotalTosses++
@@ -267,5 +283,7 @@ class GameActivity : AppCompatActivity() {
         })
 
     }
+
+
 
 }
