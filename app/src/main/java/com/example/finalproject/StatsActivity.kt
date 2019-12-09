@@ -58,6 +58,9 @@ class StatsActivity : AppCompatActivity() {
         sinks1.text = intent.extras?.get("sinks1").toString()
         sinks2.text = intent.extras?.get("sinks2").toString()
 
+        team1StatColumn.text = intent.extras?.get("teamName1").toString()
+        team2StatColumn.text = intent.extras?.get("teamName2").toString()
+
 
 
         displayFinalScores.text = intent.extras?.get("finalScores").toString()

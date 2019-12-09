@@ -30,6 +30,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:text="SCORE"
+        android:layout_marginTop="40dp"
         android:textColor="#0C0C0C"
         android:textColorHighlight="#00FFFFFF"
         android:textColorHint="#000000"
@@ -69,8 +70,8 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:paddingLeft="8dp"
-                android:text="Stat"
-
+                android:text="Team Name"
+                android:textStyle="bold"
                 android:layout_column="0"
                 />
 
@@ -80,7 +81,7 @@
                 android:layout_height="wrap_content"
                 android:paddingLeft="8dp"
                 android:text="Team 1"
-
+                android:textStyle="bold"
                 android:layout_column="0"
                 />
 
@@ -91,6 +92,8 @@
                 android:layout_height="wrap_content"
                 android:text="Team 2"
                 android:layout_column="1"
+                android:textStyle="bold"
+
                 />
         </TableRow>
 

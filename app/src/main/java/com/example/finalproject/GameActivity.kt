@@ -256,6 +256,14 @@ class GameActivity : AppCompatActivity() {
                 "sinks2",
                 sinks2
             )
+            putExtra(
+                "teamName1",
+                getTeam1Name()
+            )
+            putExtra(
+                "teamName2",
+                getTeam2Name()
+            )
         })
 
     }
