@@ -149,6 +149,9 @@ class GameActivity : AppCompatActivity() {
             var animation2 = AnimationUtils.loadAnimation(this@GameActivity, R.anim.magnify)
             catchButton.startAnimation(animation2)
 
+            var animation5 = AnimationUtils.loadAnimation(this@GameActivity, R.anim.rightleft)
+            image.startAnimation(animation5)
+
             if(currentIndex == 0 || currentIndex == 1)
             {
                 team1TotalTosses++
@@ -174,6 +177,10 @@ class GameActivity : AppCompatActivity() {
         missButton.setOnClickListener{
             var animation3 = AnimationUtils.loadAnimation(this@GameActivity, R.anim.zoom)
             missButton.startAnimation(animation3)
+
+            var animation5 = AnimationUtils.loadAnimation(this@GameActivity, R.anim.rightleft)
+            image.startAnimation(animation5)
+
             if(currentIndex == 0 || currentIndex == 1)
             {
                 team1TotalTosses++
