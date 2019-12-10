@@ -40,8 +40,6 @@ class GameActivity : AppCompatActivity() {
         setContentView(R.layout.activity_game)
 
 
-
-
         var playerArray : Array<String> = arrayOf(getTeam1Name() + ": Player 1",getTeam1Name() + ": Player 2",getTeam2Name() + ": Player 1",getTeam2Name() + ": Player 2")
 
         displayTeam.text = playerArray[currentIndex]
@@ -49,7 +47,6 @@ class GameActivity : AppCompatActivity() {
         scoreButton.setOnClickListener{
 
             image.animate().rotationBy(360f).start()
-
 
 
             var animation1 = AnimationUtils.loadAnimation(this@GameActivity, R.anim.mixed)
@@ -151,6 +148,7 @@ class GameActivity : AppCompatActivity() {
         catchButton.setOnClickListener{
             var animation2 = AnimationUtils.loadAnimation(this@GameActivity, R.anim.magnify)
             catchButton.startAnimation(animation2)
+
             if(currentIndex == 0 || currentIndex == 1)
             {
                 team1TotalTosses++
