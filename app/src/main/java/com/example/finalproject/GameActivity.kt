@@ -46,11 +46,8 @@ class GameActivity : AppCompatActivity() {
 
         scoreButton.setOnClickListener{
 
-            image.animate().rotationBy(360f).start()
-
-
             var animation1 = AnimationUtils.loadAnimation(this@GameActivity, R.anim.mixed)
-            scoreButton.startAnimation(animation1)
+            image.animate().rotationBy(360f).start()
 
             if(currentIndex == 0 || currentIndex == 1)
             {

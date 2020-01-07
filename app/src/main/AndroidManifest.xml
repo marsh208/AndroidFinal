@@ -5,7 +5,7 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/beer_mug"
-        android:label="Beer Die Tracker"
+        android:label="Let's Toss!"
         android:roundIcon="@mipmap/beer_mug"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
@@ -24,7 +24,7 @@
 
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-9915897781430871~1165119074"/>
+            android:value="ca-app-pub-9915897781430871~1165119074" />
     </application>
 
 </manifest>
